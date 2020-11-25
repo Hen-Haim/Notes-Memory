@@ -1,0 +1,335 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: fantasy;
+    background-image: url(./assets/board.jpg);
+}
+.myContainer{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 66% 34%;
+}
+.myHeader{
+    grid-row: 66%;
+    grid-column: span 12;
+    font-size: 17px;
+    height:270px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./assets/writing\ notes.jpg);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    position: relative;
+    top:-50px;
+}
+#notes-placed{
+    border: none;
+    position: absolute;
+    line-height: 125%;
+}
+#myForm{
+    display: flex;
+    flex-direction: column;
+    width:320px;
+    position: relative;
+    margin-top: 66px;
+    margin-left: -29px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-size: 19px;
+    left: -58px;
+    top:-12px;   
+}
+.divButton{
+    position: relative;
+    right:-160px;
+    top:20px;
+    font-family: fantasy;
+}
+.NoteMeBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    transform: rotate(-25deg);
+    position: relative;
+    left:142px;
+    bottom:65px;
+}
+.headline{
+    grid-row: 34%;
+    grid-column: span 12; 
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: -55px;
+    background-image: url(./assets/header\ background.jpg);
+    background-size: 500px 130px;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    align-items: center;
+    text-shadow: 0 0 0.5em  #b8dfce, 0 0 1em rgb(189, 189, 235);
+
+}
+::placeholder, .label-time{
+    text-shadow: 3px 5px #6ca58d;
+    -webkit-text-fill-color: rgb(248, 250, 142);
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color:  #916780;
+}
+.trash-icon:hover, .date-icon-div:hover, .time-icon-div:hover, .text-icon-div:hover,
+ .NoteMeBtn:hover, .x-button:hover, .x-button{
+    text-shadow: 3px 5px #6ca58d;
+    -webkit-text-fill-color: rgb(248, 250, 142);
+    -webkit-text-stroke-width: 1.7px;
+    -webkit-text-stroke-color:  #633a53;
+ }
+
+input:focus, .NoteMeBtn:focus, textarea:focus, .x-button:focus{
+    outline: none;
+    border:none;
+    background-color: transparent;
+}
+.myMainAside{
+    margin-top: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    margin-top: 120px;
+}
+.my-notes{
+    opacity:0%;
+    background-color: transparent;
+    width : 230px;
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+    margin: 30px;
+    padding-top: 50px;
+    padding-left:20px;
+    justify-content: left;
+    position: relative;
+}
+#notes-placed{
+    height: 80px;
+    width:270px;
+    overflow:scroll;
+    background-color: transparent;
+    border: none;
+    resize: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    left: -10px;
+    bottom:-59px;
+}
+.note-class-01, .note-class-02, .note-class-03, .note-class-04{
+    opacity:100%;
+    width : 230px;
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+    margin: 50px;
+    padding-top: 50px;
+    padding-left:20px;
+    justify-content: left;
+    box-shadow: 3px 4px rgb(97, 95, 95);
+    background-size: cover;
+    transition-property: opacity margin box-shadow background-size transform background-image;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-out;
+}
+.note-class-01{
+    background-image: url("./assets/the\ notes.jpg");
+    transform: rotate(7deg);
+}
+.note-class-02{
+    background-image: url("./assets/the\ notes2.jpg");
+    transform: rotate(-17deg);   
+}
+.note-class-03{
+    background-image: url("./assets/the notes3.jpg");
+    transform: rotate(10deg);    
+}
+.note-class-04{
+    background-image: url("./assets/the notes4.jpg");
+    transform: rotate(-7deg);    
+}
+
+.web-header{
+    margin-top: 45px;
+    margin-left: 35px;
+    margin-bottom: 50px;
+    word-spacing: 54px;
+}
+::-webkit-scrollbar{
+    color: transparent;
+}
+.button-appearing{
+    opacity: 0%;
+    font-size: 18px;
+    position: absolute;
+    left:20px ;
+    top:10px;
+    transform: rotate(-45deg);
+    background-color: transparent;
+    border: none;
+    transition-property: opacity font-size left background-color transform ;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+.x-button{
+    opacity: 100%;
+    font-size: 25px;
+    position: absolute;
+    left:10px ;
+    top:10px;
+    transform: rotate(0deg);
+    background-color: transparent;
+    border: none;
+    transition-property: opacity font-size left background-color transform ;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+.PNotesPlaced{
+    color: rgb(67, 128, 74);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    overflow-y: scroll;
+    position: relative;
+    height: 55%;
+}
+.PTimePlaced{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    color: rgb(104, 103, 103);
+    position: absolute;
+    bottom: 0px;
+    line-height: 19px;
+}
+.label-time{
+    position: relative;
+    bottom: 55px;
+    left:10px;
+    padding: 0;
+    margin: 0;
+    margin-top: -80px;
+}
+.count-down-div-01, .count-down-div-02, .count-down-div-03{
+    position: absolute;
+    -webkit-text-stroke-width: 0.2px;
+    bottom: 53px;
+    text-shadow: -1.5px 1.5px 1.5px rgb(0, 0, 0), 0 0 0.1em  #6ca58d, 0 0 0.3em rgb(152, 152, 231);
+
+}
+.count-down-div-01{
+    -webkit-text-fill-color: rgb(46, 170, 52);
+    -webkit-text-stroke-color:  #000000;
+}
+.count-down-div-02{
+    -webkit-text-fill-color: rgb(255, 123, 0);
+    -webkit-text-stroke-color:  #000000;
+}
+.count-down-div-03{
+    -webkit-text-fill-color: rgb(255, 0, 0);
+    -webkit-text-stroke-color:  #000000;
+}
+.distance, .my-number{
+    display: none;
+}
+.input-date, .input-time, .input-text{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    padding: 0;
+    margin-top: -113px;
+    width:330px;
+}
+.input-text{
+    padding: 0;
+    margin-top: -18px;
+}
+.input-time{
+    margin-top: -68px;
+    width:300px;
+}
+.date-icon-div, .time-icon-div, .text-icon-div{
+    flex:0.2;
+    position: relative;
+    left:-50px;
+    top:9px;
+    padding: 0;
+    margin: 0;
+    width: fit-content;  
+    height: fit-content;
+    cursor: pointer;  
+}
+.text-icon-div{
+    top:29px;
+    left:-53px;
+}
+.date-icon, .time-icon, .text-icon, .trash-icon{
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    border: none;
+}
+.time-icon,.text-icon{
+    font-size: 16px;
+}
+
+.time-me, .date-me, .text-me{
+    border: none;
+    position: absolute;
+    line-height: 125%;
+    background-color: transparent;
+    left: -52px;
+    margin-right: 100px;
+}
+.time-me{
+    left:-46px;
+}
+.text-me{
+    font-size: 18px;
+}
+.time-me:focus, .date-me:focus, .text-me:focus{
+    outline: none;
+    border:none;
+    background-color: transparent;
+    box-shadow:none;
+}
+.text-me::placeholder{
+    font-size: 19px;
+}
+.trash-icon{
+    position: relative;
+    left:-54px;
+    top:120px;
+    font-size: 26px;
+    cursor: pointer;
+    width:20px;  
+}
+.NoteMeBtn, .date-icon-div, .text-icon-div, .time-icon-div, .trash-icon, .x-button{
+    text-shadow: 1px 1px 2px black, 0 0 0.4em  #6ca58d, 0 0 0.2em rgb(76, 76, 236);
+    -webkit-text-fill-color: rgb(248, 250, 142);
+    -webkit-text-stroke-width: 0.9px;
+    -webkit-text-stroke-color:  #916780;
+}
+.NoteMeBtn:hover, .NoteMeBtn{
+    transition-property: text-shadow -webkit-text-fill-color -webkit-text-stroke-width
+    transform -webkit-text-stroke-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+ }
+.NoteMeBtn2,.trash-icon2, .date-icon-div2, .time-icon-div2, .text-icon-div2{
+    text-shadow: 3px 5px #6ca58d;
+    -webkit-text-fill-color: rgb(248, 250, 142);
+    -webkit-text-stroke-width: 1.7px;
+    -webkit-text-stroke-color:  #633a53;
+    transition-property: text-shadow -webkit-text-fill-color -webkit-text-stroke-width
+    transform -webkit-text-stroke-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
