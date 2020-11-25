@@ -47,16 +47,16 @@ let noteMe = () => {
         if (TimePlaced == null || TimePlaced == 0) {
 
         } else {
-            var setDate = new Date(TimePlaced);
+            let setDate = new Date(TimePlaced);
             TimePlaced = setDate.toISOString().slice(0, 16);
-            var countDownDate = setDate.getTime();
-            var x = setInterval(() => {
-                var now = new Date().getTime();
-                var distance = countDownDate - now;
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            let countDownDate = setDate.getTime();
+            let x = setInterval(() => {
+                let now = new Date().getTime();
+                let distance = countDownDate - now;
+                let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
                 CountDownDiv.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
                 //declare each notes to the specific time//
@@ -92,7 +92,7 @@ let noteMe = () => {
         myNotes.onmouseleave = event => btnTransformBack(event.target.childNodes[4]);
 
         //clearing the notes by a button//
-        let myClear = (theNumber) => {
+        let myClear = theNumber => {
             for (let i = 0; i < thisNotes.length; i++) {
                 if (thisNotes[i].NoteNumber == +theNumber) {
                     localStorage.removeItem(thisNotes[i].NoteNumber);
